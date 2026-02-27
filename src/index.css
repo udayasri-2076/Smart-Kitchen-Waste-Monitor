@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 140 20% 97%;
+    --foreground: 150 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 10%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 145 30% 92%;
+    --secondary-foreground: 150 30% 15%;
+
+    --muted: 140 15% 94%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 15% 89%;
+    --input: 140 15% 89%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 142 30% 12%;
+    --sidebar-foreground: 140 15% 90%;
+    --sidebar-primary: 142 76% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 25% 20%;
+    --sidebar-accent-foreground: 140 15% 95%;
+    --sidebar-border: 142 20% 18%;
+    --sidebar-ring: 142 76% 50%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 25 95% 53%;
+    --warning-foreground: 0 0% 100%;
+    --info: 200 80% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --glass-bg: 0 0% 100% / 0.7;
+    --glass-border: 0 0% 100% / 0.3;
+    --glass-shadow: 142 76% 36% / 0.1;
+  }
+
+  .dark {
+    --background: 150 20% 6%;
+    --foreground: 140 15% 92%;
+
+    --card: 150 20% 10%;
+    --card-foreground: 140 15% 92%;
+
+    --popover: 150 20% 10%;
+    --popover-foreground: 140 15% 92%;
+
+    --primary: 142 76% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 15% 15%;
+    --secondary-foreground: 140 15% 90%;
+
+    --muted: 150 15% 14%;
+    --muted-foreground: 140 10% 55%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 18%;
+    --input: 150 15% 18%;
+    --ring: 142 76% 45%;
+
+    --sidebar-background: 150 25% 5%;
+    --sidebar-foreground: 140 15% 85%;
+    --sidebar-primary: 142 76% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 20% 12%;
+    --sidebar-accent-foreground: 140 15% 90%;
+    --sidebar-border: 150 15% 12%;
+    --sidebar-ring: 142 76% 50%;
+
+    --glass-bg: 150 20% 10% / 0.6;
+    --glass-border: 150 15% 25% / 0.3;
+    --glass-shadow: 142 76% 36% / 0.15;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-xl border backdrop-blur-xl;
+    background: hsl(var(--glass-bg));
+    border-color: hsl(var(--glass-border));
+    box-shadow: 0 8px 32px hsl(var(--glass-shadow));
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300;
+  }
+
+  .glass-card-hover:hover {
+    box-shadow: 0 12px 40px hsl(var(--glass-shadow));
+    transform: translateY(-2px);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(142 76% 36%), hsl(160 70% 40%));
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, hsl(25 95% 53%), hsl(35 95% 55%));
+  }
+
+  .gradient-sidebar {
+    background: linear-gradient(180deg, hsl(142 30% 12%), hsl(150 25% 8%));
+  }
+
+  .dark .gradient-sidebar {
+    background: linear-gradient(180deg, hsl(150 25% 5%), hsl(150 30% 3%));
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(142 76% 36%), hsl(160 70% 40%));
+  }
+
+  .kpi-glow {
+    box-shadow: 0 0 30px hsl(142 76% 36% / 0.15), 0 8px 32px hsl(var(--glass-shadow));
+  }
+
+  .dark .kpi-glow {
+    box-shadow: 0 0 30px hsl(142 76% 45% / 0.2), 0 8px 32px hsl(var(--glass-shadow));
+  }
+
+  .alert-glow {
+    box-shadow: 0 0 30px hsl(25 95% 53% / 0.2);
+  }
+}
