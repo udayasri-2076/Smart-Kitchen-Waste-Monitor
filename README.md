@@ -209,9 +209,3 @@ LinkedIn:
 https://www.linkedin.com/in/udayasri-simma-b0541b331/
 
 ---
-
-## ⭐ Future Improvements
-
-* Weather API integration
-* Dashboard analytics
-* Deep Learning model
