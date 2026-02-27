@@ -1,73 +1,217 @@
-# Welcome to your Lovable project
+# 🍽️ Smart Kitchen Waste Monitor
 
-## Project info
+Smart Kitchen Waste Monitor is an AI-powered web application that predicts restaurant food waste and recommends optimal ordering quantities using Machine Learning.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This system helps restaurants reduce food waste and improve profitability by analyzing:
 
-## How can I edit this code?
+* Customer count
+* Temperature
+* Rain conditions
+* Holidays/Events
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+✅ Predict food waste using Machine Learning
+✅ Predict restaurant sales
+✅ Recommend order quantities
+✅ Simple web interface
+✅ Real-time predictions
+✅ AI-based decision support
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🧠 Machine Learning Model
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The system uses **Linear Regression** trained on restaurant data.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Input Features
 
-Follow these steps:
+* Customers
+* Temperature
+* Rain
+* Holiday/Event
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Output
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+* Predicted Sales
+* Predicted Waste
+* Recommended Order Quantity
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🛠 Tech Stack
+
+### Frontend
+
+* HTML
+* CSS
+* JavaScript
+* Vite
+
+### Backend
+
+* Python
+* Flask
+
+### Machine Learning
+
+* Pandas
+* NumPy
+* Scikit-learn
+
+---
+
+## 📂 Project Structure
+
+```
+Smart-Kitchen-Waste-Monitor/
+
+│
+├── backend/
+│   ├── app.py
+│   ├── sales.csv
+│   ├── sales_one_hot_encoding.csv
+│   └── sales_with_extra_features.csv
+│
+├── public/
+├── src/
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── tailwind.config.ts
+├── vite.config.ts
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone Repository
+
+```
+git clone https://github.com/udayasri-2076/Smart-Kitchen-Waste-Monitor.git
+```
+
+```
+cd Smart-Kitchen-Waste-Monitor
+```
+
+---
+
+## ▶️ Run Backend
+
+Install dependencies:
+
+```
+pip install flask pandas numpy scikit-learn flask-cors
+```
+
+Run server:
+
+```
+python backend/app.py
+```
+
+Server runs on:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## ▶️ Run Frontend
+
+Install Node modules:
+
+```
+npm install
+```
+
+Run frontend:
+
+```
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📊 Dataset Example
 
-## What technologies are used for this project?
+```
+Customers,Temperature,Rain,Holiday,Sales,Waste
+50,30,0,0,200,10
+80,25,1,1,400,25
+40,35,0,0,150,5
+100,28,1,1,500,30
+```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📈 How It Works
 
-## How can I deploy this project?
+1. User enters:
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+* Customers
+* Temperature
+* Rain
+* Holiday/Event
 
-## Can I connect a custom domain to my Lovable project?
+2. AI model predicts:
 
-Yes, you can!
+* Sales
+* Waste
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+3. System recommends:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+* Optimal order quantity
+
+---
+
+## 🎯 Problem Solved
+
+Restaurants often waste food due to incorrect demand estimation.
+
+This project:
+
+* Reduces food waste
+* Saves money
+* Improves planning
+* Uses AI for decision making
+
+---
+
+## 🏆 Hackathon Project
+
+Built as a real-world AI solution to reduce restaurant food waste.
+
+---
+
+## 👨‍💻 Author
+
+**Udayasri Simma**
+
+GitHub:
+https://github.com/udayasri-2076
+
+LinkedIn:
+https://www.linkedin.com/in/udayasri-simma-b0541b331/
+
+---
+
+## ⭐ Future Improvements
+
+* Weather API integration
+* Dashboard analytics
+* Deep Learning model
